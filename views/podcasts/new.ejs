@@ -1,0 +1,18 @@
+<% if (locals.message) { %>
+    <p>
+        <%= message %>
+    </p>
+    <% } %>
+
+        <form class="form-inline search-podcasts">
+            <div class="form-group">
+            </div>
+            <h4>Seach pocasts to add to your playlist</h4>
+            <div class="form-group mx-sm-3 search-box">
+                <label type="search" class="sr-only"></label>
+                <input type="search" class="form-control" placeholder="e.g node">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Search Podcast">Search</button>
+        </form>
+
+        <div class="podcasts-search-results result"></div>
