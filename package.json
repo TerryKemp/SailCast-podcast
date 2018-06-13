@@ -10,7 +10,9 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "express-ejs-layouts": "^2.4.0",
     "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
     "express-sessions": "^1.0.6",
     "forever": "^0.15.3",
     "gulp": "^3.9.1",
@@ -24,7 +26,9 @@
     "morgan": "^1.9.0",
     "nodemon": "^1.17.5",
     "request": "^2.87.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "yarn": "^1.7.0",
+    "yarn.lock": "0.0.1-security"
   },
   "devDependencies": {},
   "scripts": {
