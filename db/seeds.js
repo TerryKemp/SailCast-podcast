@@ -12,15 +12,15 @@ Podcast.collection.drop()
 
 User
   .create([{
-    username: 'rgowan',
-    email: 'rane@rane.com',
-    password: 'password',
-    passwordConfirmation: 'password'
+    username: '',
+    email: '',
+    password: '',
+    passwordConfirmation: ''
   }, {
-    username: 'brian',
-    email: 'brian@brian.com',
-    password: 'password',
-    passwordConfirmation: 'password'
+    username: '',
+    email: '',
+    password: '',
+    passwordConfirmation: ''
   }])
   .then(users => {
     console.log(`${users.length} were created`)

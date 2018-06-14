@@ -10,16 +10,19 @@ const routes = require('./config/routes')
 const User = require('./models/user')
 const session = require('express-session')
 const flash = require('express-flash')
+const passport = require('passport')
 
-// const passport = require('./config/passport')
-// passport.use(passport.initialize())
-// passport.use(passport.session())
+const app = express()
+
+require('./config/passport')
+app.use(passport.initialize())
+app.use(passport.session())
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const env = require('./config/env')
 
 // setup Express app
-const app = express()
+
 app.set('view engine', 'ejs')
 app.set('views', `${__dirname}/views`)
 
