@@ -1,7 +1,7 @@
 {
   "name": "sailcast",
   "version": "1.0.0",
-  "description": "",
+  "description": "SailCast is a new way for you to enjoy your favorite podcast, search for new podcast, and to share your podcast with your friends.",
   "main": "index.js",
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
