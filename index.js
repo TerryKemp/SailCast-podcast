@@ -82,6 +82,9 @@ app.use((req, res, next) => {
 })
 
 app.use(routes)
-app.listen(env.port, () => console.log(`Express is listening on port ${env.port}`))
+  app.set('port', process.env.PORT || 3001)
 
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
+})
 app.use(express.static(`${__dirname}/public`))
