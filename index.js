@@ -1,7 +1,7 @@
 
 const express = require('express')
 const morgan = require('morgan')
-const expressEjsLayouts = require('express-ejs-layouts')
+const ejs = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
@@ -10,6 +10,10 @@ const routes = require('./config/routes')
 const User = require('./models/user')
 const session = require('express-session')
 const flash = require('express-flash')
+
+// const passport = require('./config/passport')
+// passport.use(passport.initialize())
+// passport.use(passport.session())
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const env = require('./config/env')
@@ -25,8 +29,8 @@ mongoose.connect(env.db)
 // middleware
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(expressEjsLayouts)
-
+app.use(ejs)
+app.use(express.static('src'))
 app.use(methodOverride(function (req) {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
     const method = req.body._method
