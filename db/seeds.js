@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = require('bluebird')
 
-const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/wdi-project-2'
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/sailcast'
 mongoose.connect(dbURI)
 
 const User = require('../models/user')
