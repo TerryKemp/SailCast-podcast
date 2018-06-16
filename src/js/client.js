@@ -1,4 +1,4 @@
-'use strict'
+
 
 $(init)
 // $(init2)
@@ -46,7 +46,7 @@ function searchForPodcasts (e) {
   const query = $(this).find('input[type=search]').val()
 
   $
-    .get(`http://localhost:3000/podcasts/get/${query}`)
+    .get(`http://localhost:3001/podcasts/get/${query}`)
     .done(data => {
       $(this).find('input[type=search]').val('')
 
