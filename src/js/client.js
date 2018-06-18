@@ -1,13 +1,13 @@
 $(init)
 // $(init2)
 
-function init() {
+function init () {
   if ($('.podcast-container').length !== 0) getTopPodcasts()
   $('.search-podcasts').on('submit', searchForPodcasts)
   $('.podcasts-search-results').on('click', 'div', postPodcastToPlaylist)
 }
 
-function getTopPodcasts() {
+function getTopPodcasts () {
   $
     .get('https://itunes.apple.com/us/rss/toppodcasts/genre=1456/json')
     .done(data => {
@@ -38,7 +38,7 @@ function getTopPodcasts() {
 //     })
 // }
 
-function searchForPodcasts(e) {
+function searchForPodcasts (e) {
   e.preventDefault()
   $('.podcasts-search-results').empty()
   const query = $(this).find('input[type=search]').val()
@@ -66,29 +66,29 @@ function searchForPodcasts(e) {
         centerPadding: '60px',
         slidesToShow: 3,
         responsive: [{
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
           }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
         ]
       })
     })
 }
 
-function postPodcastToPlaylist() {
+function postPodcastToPlaylist () {
   console.log('init')
   const podcastData = {
     title: $(this).attr('data-collection').split('(')[0],
@@ -98,7 +98,7 @@ function postPodcastToPlaylist() {
   }
 
   $
-    .post('http://localhost:3000/podcasts', podcastData)
+    .post('http://localhost:3001/podcasts', podcastData)
     .done(() => {
       $(this).find('img').css('opacity', '.3')
       $('<span>Added to Playlist</span>').appendTo($(this))
