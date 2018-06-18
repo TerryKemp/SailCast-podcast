@@ -17,3 +17,10 @@ SailCast was built using:
 Express, Node, Ajax, Mongo, jQuery, mongoose, bcrypt, iTunes store search API,Bootstrap 4, slick.js,
 [jQuery library] (https://developers.google.com/speed/libraries/)
 [Fonts] (https://fonts.google.com/)
+
+
+What I would like to add next.
+
+3rd party login/registration.  Users would be allowed to sign in using Facebook, twitter, instagram, or using Apple ID.  This would allow the user to share their favorite podcast with friends.
+Comment section to allow users to write comments.
+Like button that will allow users to like a podcast and share it to their social network. 
