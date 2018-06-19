@@ -30,7 +30,7 @@
     "yarn.lock": "0.0.1-security"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1", 
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.4",
