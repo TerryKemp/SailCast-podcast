@@ -5,6 +5,7 @@ const statics = require('../controllers/statics')
 const sessions = require('../controllers/sessions')
 const registrations = require('../controllers/registrations')
 const podcasts = require('../controllers/podcasts')
+const comments = require('../controllers/comments')
 
 function secureRoute (req, res, next) {
   if (!req.session.userId) {
@@ -45,4 +46,7 @@ router.route('/podcasts/:id/edit')
   .get(podcasts.edit)
   .get(secureRoute, podcasts.edit)
 
+router.route('/comments')
+  .post(comments.create)
+  
 module.exports = router

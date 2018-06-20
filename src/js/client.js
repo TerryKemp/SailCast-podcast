@@ -27,7 +27,7 @@ function init2() {
 
 function getTopPodcasts2() {
   $
-    .get('https://itunes.apple.com/us/rss/toppodcasts/genre=1311/json')
+    .get('https://itunes.apple.com/us/rss/toppodcasts/genre=1321/json')
     .done(data => {
       const json = JSON.parse(data)
       json.feed.entry.forEach(podcast => {

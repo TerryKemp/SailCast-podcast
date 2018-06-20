@@ -95,7 +95,7 @@ function podcastsDelete (req, res, next) {
 }
 
 function getPodcasts (req, res) {
-  rp(`https://itunes.apple.com/search?term=${req.params.query}&media=podcast&country=gb&limit=25`)
+  rp(`https://itunes.apple.com/search?term=${req.params.query}&media=podcast&country=gb&limit=50`)
     .then(response => {
       const data = JSON.parse(response)
       res.json(data)
