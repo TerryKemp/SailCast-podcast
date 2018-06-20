@@ -79,7 +79,7 @@ function postPodcastToPlaylist () {
   }
 
   $
-    .post('https://sail-cast.herokuapp.com/:/podcasts', podcastData)
+    .post('https://sail-cast.herokuapp.com:/podcasts', podcastData)
     .done(() => {
       $(this).find('img').css('opacity', '.3')
       $('<span>Added to Playlist</span>').appendTo($(this))
