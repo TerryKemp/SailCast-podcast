@@ -1,3 +1,5 @@
+// const passport = require('passport')
+
 // var LocalStrategy = require('passport-local').Strategy
 // var User = require('../models/user')
 
@@ -6,10 +8,8 @@
 //     usernameField: 'email',
 //     passwordField: 'password',
 //     passReqToCallback: true
-//   }, function (req, email, password, callback) {
-
-//   }))
-// }, function (req, email, password, callback) {
+//   })),
+//   function (req, email, password, callback) {
 //   // Find a user with this e-mail
 //   User.findOne({
 //     'local.email': email
@@ -40,5 +40,4 @@
 //         callback(err, user)
 //       })
 //     })
-//   })
-// }
+//   })})

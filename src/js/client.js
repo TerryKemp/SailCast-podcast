@@ -61,7 +61,7 @@ function searchForPodcasts (e) {
             arrows: false,
             centerMode: true,
             centerPadding: '40px',
-            slidesToShow: 1
+            slidesToShow: 2
           }
         }
         ]
