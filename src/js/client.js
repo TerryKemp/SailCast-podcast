@@ -1,5 +1,4 @@
 $(init)
-$(init2)
 
 function init () {
   if ($('.podcast-container').length !== 0) getTopPodcasts()
@@ -19,24 +18,6 @@ function getTopPodcasts () {
       })
     })
 }
-function init2() {
-  if ($('.podcast-container').length !== 0) getTopPodcasts2()
-  $('.search-podcasts').on('submit', searchForPodcasts)
-  $('.podcasts-search-results').on('click', 'div', postPodcastToPlaylist)
-}
-
-function getTopPodcasts2() {
-  $
-    .get('https://itunes.apple.com/us/rss/toppodcasts/genre=1321/json')
-    .done(data => {
-      const json = JSON.parse(data)
-      json.feed.entry.forEach(podcast => {
-        $(`<div =class"col-3">
-      <img src="${podcast['im:image'][2].label}">
-      </div>`).appendTo('.podcast-container')
-      })
-    })
-}
 
 function searchForPodcasts (e) {
   e.preventDefault()
@@ -44,7 +25,7 @@ function searchForPodcasts (e) {
   const query = $(this).find('input[type=search]').val()
 
   $
-    .get(`http://localhost:3001/podcasts/get/${query}`)
+    .get(`https://sail-cast.herokuapp.com/podcasts/get/${query}`)
     .done(data => {
       $(this).find('input[type=search]').val('')
 
