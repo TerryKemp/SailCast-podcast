@@ -1,4 +1,5 @@
 $(init)
+$(init2)
 
 function init () {
   if ($('.podcast-container').length !== 0) getTopPodcasts()
@@ -8,7 +9,25 @@ function init () {
 
 function getTopPodcasts () {
   $
-    .get('https://itunes.apple.com/us/rss/toppodcasts/genre/json')
+    .get('https://itunes.apple.com/us/rss/toppodcasts/genre=1313/json')
+    .done(data => {
+      const json = JSON.parse(data)
+      json.feed.entry.forEach(podcast => {
+        $(`<div =class"col-3">
+      <img src="${podcast['im:image'][2].label}">
+      </div>`).appendTo('.podcast-container')
+      })
+    })
+}
+function init2() {
+  if ($('.podcast-container').length !== 0) getTopPodcasts2()
+  $('.search-podcasts').on('submit', searchForPodcasts)
+  $('.podcasts-search-results').on('click', 'div', postPodcastToPlaylist)
+}
+
+function getTopPodcasts2() {
+  $
+    .get('https://itunes.apple.com/us/rss/toppodcasts/genre=1321/json')
     .done(data => {
       const json = JSON.parse(data)
       json.feed.entry.forEach(podcast => {
@@ -25,7 +44,7 @@ function searchForPodcasts (e) {
   const query = $(this).find('input[type=search]').val()
 
   $
-    .get(`https://sail-cast.herokuapp.com//podcasts/get/${query}`)
+    .get(`http://localhost:3001/podcasts/get/${query}`)
     .done(data => {
       $(this).find('input[type=search]').val('')
 
@@ -72,14 +91,14 @@ function searchForPodcasts (e) {
 function postPodcastToPlaylist () {
   console.log('init')
   const podcastData = {
-    title: $(this).attr('data-collection').split('(')[0],
+    title: $(this).attr('data-collection'),
     artist: $(this).attr('data-artist'),
     image: $(this).attr('data-artwork'),
     feedUrl: $(this).attr('data-feedurl')
   }
 
   $
-    .post('https://sail-cast.herokuapp.com/podcasts', podcastData)
+    .post('https://sail-cast.herokuapp.com/:/podcasts', podcastData)
     .done(() => {
       $(this).find('img').css('opacity', '.3')
       $('<span>Added to Playlist</span>').appendTo($(this))
