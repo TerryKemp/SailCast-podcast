@@ -91,7 +91,7 @@ function searchForPodcasts (e) {
 function postPodcastToPlaylist () {
   console.log('init')
   const podcastData = {
-    title: $(this).attr('data-collection').split('(')[0],
+    title: $(this).attr('data-collection'),
     artist: $(this).attr('data-artist'),
     image: $(this).attr('data-artwork'),
     feedUrl: $(this).attr('data-feedurl')
