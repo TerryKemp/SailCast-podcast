@@ -6,7 +6,7 @@
      background: black;
  }
 body {
-   background: linear-gradient(to right, rgb(158, 158, 149), rgb(37, 172, 10));
+   background: linear-gradient(to right, rgba(218, 41, 41, 0.671), rgba(0, 255, 0, 0.774));
     
 }
 .title {
