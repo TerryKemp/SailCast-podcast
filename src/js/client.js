@@ -25,7 +25,7 @@ function searchForPodcasts (e) {
   const query = $(this).find('input[type=search]').val()
 
   $
-    .get(`http://https://sail-cast.herokuapp.com//podcasts/get/${query}`)
+    .get(`https://sail-cast.herokuapp.com//podcasts/get/${query}`)
     .done(data => {
       $(this).find('input[type=search]').val('')
 
