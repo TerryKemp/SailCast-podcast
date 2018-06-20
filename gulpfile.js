@@ -41,7 +41,7 @@ gulp.task('images', () => {
 
 gulp.task('serve', ['js', 'sass'], () => {
   browserSync.init({
-    proxy: 'http://localhost:3001',
+    proxy: 'http://https://sail-cast.herokuapp.com/',
     port: 3001,
     files: ['public/**/*.*'],
     reloadDelay: 500,

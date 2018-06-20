@@ -8,7 +8,7 @@ function init () {
 
 function getTopPodcasts () {
   $
-    .get('https://itunes.apple.com/us/rss/toppodcasts/genre=1313/json')
+    .get('https://itunes.apple.com/us/rss/toppodcasts/genre/json')
     .done(data => {
       const json = JSON.parse(data)
       json.feed.entry.forEach(podcast => {
@@ -25,7 +25,7 @@ function searchForPodcasts (e) {
   const query = $(this).find('input[type=search]').val()
 
   $
-    .get(`http://localhost:3001/podcasts/get/${query}`)
+    .get(`http://https://sail-cast.herokuapp.com//podcasts/get/${query}`)
     .done(data => {
       $(this).find('input[type=search]').val('')
 
