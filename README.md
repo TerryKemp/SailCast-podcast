@@ -10,7 +10,7 @@ The home screen displays a list of currently trending Outdoor lifestyle podcasts
 Wireframing with Balsamiq
  Balsamiq was used to create the wire frames. to plan the app. This assisted with the fast and easy planning of SailCast.  
 
-![alt text](http://url/to/HOMEPAGE.png)
+![alt text](/HOMEPAGE.png)
 HOMEPAGE.png
 LOGIN PAGE.png
 PLAYLIST.png
