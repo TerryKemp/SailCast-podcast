@@ -2,7 +2,8 @@
 
 Introduction
 SailCast is a simple full stack app where you can create a playlist of your favourite podcasts. With Sailcast you can search, listen, and share your favorite with your friends.  The technology used is node.js & express.
-https://sail-cast.herokuapp.com/
+
+SailCast can be found at - https://sail-cast.herokuapp.com/
 
 How the app works
 The home screen displays a list of currently trending Outdoor lifestyle podcasts using the iTunes API. The user must register or login to create a playlist. Once logged in, the user can search the iTunes database with the results displayed in a carousel by slick.
