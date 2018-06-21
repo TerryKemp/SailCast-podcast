@@ -1,0 +1,165 @@
+ .row {
+  border: 10px;
+ }
+
+ .contatiner{
+     background: black;
+ }
+body {
+   background: linear-gradient(to right, rgba(218, 41, 41, 0.671), rgba(0, 255, 0, 0.774));
+    
+}
+.title {
+    text-align: center;
+}
+
+ h5 {
+    text-align: center;
+    font-size: 45px;
+    color:blue;
+}
+
+.podcast-result {
+    position: center;
+    cursor: crosshair;
+} img {
+        border-radius: 5px;
+        width: 250px;
+        transition: 0.5s;
+    }
+    span {
+        color: red;
+        text-align: center;
+        position: unset;
+        top: auto;
+        left: 15px;
+        z-index: 2;
+        font-size: 20px;
+    }
+  
+    h6 {
+        font-size: 10px;
+    }
+
+.podcast-container {
+    margin: 80px;
+}
+
+.register {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 25x;
+}
+
+.login {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.search-podcasts {
+    max-width: 460px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+img {
+    border: 20px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color:red;
+}
+
+.welcome-message {
+    text-align: center;
+}
+
+.podcast-container {
+    border: 50px;
+}
+
+.results {
+    display: block;
+    margin: 0 auto;
+    background: grey;
+}
+
+.search-box {
+    margin: 10px;
+}
+
+.playlist-item {
+    position: relative;
+    cursor: pointer;
+ } 
+ img {
+        border-radius: 25px;
+        width: 130px;
+        transition: opacity, 0.5s;
+    }
+    h4 {
+        font-size: 15px;
+        color: blue;
+        text-decoration: underline;
+    }
+    h6 {
+        font-size: 10px;
+    }
+#footer {
+  
+    /* padding: 5rem; */
+    text-align: center;
+      list-style-type: none;
+}
+.icons {
+    list-style-type: none;
+    font-size: 15px;
+    border-radius: 50%;
+    display: -webkit-inline-box;
+}
+fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    margin-right: 20px;
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
+}
+.fa-google {
+    background: red;
+    color: white;
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
+}
+
+.copyright * {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    list-style-type: none;
+}
+
+.ul {
+      list-style-type: none;
+}
